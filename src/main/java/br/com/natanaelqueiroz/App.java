@@ -3,6 +3,10 @@ package br.com.natanaelqueiroz;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+import javax.swing.JOptionPane;
 
 /**
  * Hello world!
@@ -19,7 +23,57 @@ public class App
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        
+        /*
+        Paula tem uma petshop, ela está precisando de um sistema
+        para controlar seus serviços. neste sistema, precisa cadastrar
+        o cliente (Dados básicos) os dados do Pet e o peso do pet,
+        depois o sistema deverá calcular o valor do banho, pelo peso
+        qual será este calculo:
+        - Para macho:
+            (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 15 / 100
+        - Para femêa
+            (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 30 / 100
+        Feito o calculo o sistema deverá mostrar um relatório com os dados do
+        pedido e o valor total a pagar.
+        Coloque uma usabilidade agradável
+        */
+
+        /* 
+        var mensagem = "[ Petshop da Paula ]\nVamos começar?";
+        JOptionPane.showMessageDialog(null, mensagem);
+        String nome = JOptionPane.showInputDialog("Digite o nome do cliente");
+        String telefone = JOptionPane.showInputDialog("Digite o telefone do(s) " + nome);
+        String nomeDoPet = JOptionPane.showInputDialog("Digite o nome do Pet");
+        double pesoDoPet = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso do(a) " + nomeDoPet));
+        int sexoPet = Integer.parseInt(JOptionPane.showInputDialog("O(a) " + nomeDoPet + " é macho ou fêmea ?\n1 - Macho\n2 - Fêmea"));
+        double valorPorPeso = Double.parseDouble(JOptionPane.showInputDialog("Digite o R$ valor por peso"));
+        // String nome = "Fabiana";
+        // String telefone = "(11) 99999-9999";
+        // String nomeDoPet = "Maikey";
+        // double pesoDoPet = 20.5;
+        // int sexoPet = 1;
+        // double valorPorPeso = 2.6;
+        double resultado = 0;
+        if(sexoPet == 2){
+            resultado = (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 30 / 100;
+        }
+        else{
+            resultado = (pesoDoPet * valorPorPeso) + (pesoDoPet * valorPorPeso) * 15 / 100;
+        }
+       
+        String relatorio = "Nome do cliente: " + nome + "\n";
+        relatorio += "Telefone do(a) " + nome + ": " + telefone + "\n";
+        relatorio += "Pet do(a) " + nome + ": " + nomeDoPet + "\n";
+        relatorio += "Peso do(a) " + nomeDoPet + ": " + pesoDoPet + "\n";
+        Locale localeBR = new Locale( "pt", "BR" );  
+        NumberFormat dinheiroBR = NumberFormat.getCurrencyInstance(localeBR);  
+        String valorFormatado = dinheiroBR.format(resultado);
+        relatorio += "Valor total do serviço: " + valorFormatado;
+        //System.out.println(relatorio);
+        JOptionPane.showMessageDialog(null, relatorio);
+        */
+
+       
         // === tipos primitivos mais utilizados
         // int inteiro = 5;
         // double moeda = 5.99;
